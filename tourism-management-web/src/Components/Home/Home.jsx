@@ -1,9 +1,14 @@
-
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <div>
-            Welcome to Homepage
+            <Helmet>
+            <title>EuroQuest | Home</title>
+                
+            </Helmet>
+            
+           
         </div>
     );
 };

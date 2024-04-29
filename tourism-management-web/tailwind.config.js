@@ -7,15 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryGreen: "#539700",
-        secondaryGreen: "#CBCC01",
-        primaryWhite: "#F4F8EC",
-        secondaryWhite: "#DADFD2",
-        primaryYellow: "#FAE011",
-        primaryOlive: "#292900",
-        secondaryOlive: "#A5A99D",
-        navy:"#05022B",
-        blurBg:"#F4F8EC"
+        primaryWhite: "#FFFFFF",
+        secondaryWhite: "#F9F9F9",
+        primaryBlue: "#0065FF",
+        secondaryBlue: "#F8FDFF",
+        primaryPurple: "#3B329E",
+        primaryPink: "#BC4DAE",
+        primaryNavy: "#000522",
+        
       },
     },
   },

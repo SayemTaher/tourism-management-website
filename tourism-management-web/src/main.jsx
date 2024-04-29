@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
+import { HelmetProvider } from "react-helmet-async";
 import './index.css'
 
 import {
@@ -15,6 +15,7 @@ import Register from './Components/Register/Register';
 import MyList from './Components/My List/MyList';
 import AllSpots from './Components/All Tourists/AllSpots';
 import AddTourists from './Components/Add Tourists Spot/AddTourists';
+import AuthContextProvider from './Utilities/AuthContextProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
         path:'/addTourists',
         element:<AddTourists></AddTourists>
       }
-      
+
 
 
     ]
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthContextProvider>
+      <HelmetProvider>
     <RouterProvider router={router} />
+    </HelmetProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
 )
