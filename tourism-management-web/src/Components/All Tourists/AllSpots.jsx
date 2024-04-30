@@ -4,6 +4,7 @@ import Spot from "../Spots/Spot";
 
 const AllSpots = () => {
     const touristSpots = useLoaderData()
+    //loading the complete data
     return (
         <div>
             <div>
