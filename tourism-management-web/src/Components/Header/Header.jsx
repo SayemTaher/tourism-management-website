@@ -58,6 +58,11 @@ const Header = () => {
                     <li>Add Tourists Spot</li>
                 </a>
             </NavLink>
+            <NavLink to="/myList">
+                <a>
+                    <li>My List</li>
+                </a>
+            </NavLink>
         </div>
     );
     const AuthenticatedDropdown = ({ user, handleLogOut }) => (

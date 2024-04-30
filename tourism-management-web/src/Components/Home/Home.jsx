@@ -90,7 +90,7 @@ const Home = () => {
                 </div>
                 <div data-aos="fade-up-right" className="grid grid-cols-1 mt-10 lg:grid-cols-3 md:grid-cols-2 gap-5 bg-primaryWhite p-2 rounded-xl">
                     {
-                        touristSpots.map(spotsData => <Spot key={spotsData._id} spotsData={spotsData}></Spot>)
+                        touristSpots.slice(0,6).map(spotsData => <Spot key={spotsData._id} spotsData={spotsData}></Spot>)
                     }
                 </div>
             </div>
