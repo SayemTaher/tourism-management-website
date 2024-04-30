@@ -1,5 +1,7 @@
 
-
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer data-aos="fade-up" className="footer flex  flex-col justify-center items-center  p-10 bg-primaryWhite text-base-content">
@@ -37,7 +39,19 @@ const Footer = () => {
     </fieldset>
   </form>
   </div>
-  <div ><aside >
+  <div >
+    <div className="flex  justify-between">
+        <div><img src="https://i.ibb.co/fSzys6C/logo2.png" alt="" /></div>
+        <div>euroQuest23@gmail.com</div>
+        <div className="flex items-center gap-2 text-2xl">
+<FaLinkedin></FaLinkedin>
+<FaInstagram></FaInstagram>
+<FaFacebookF></FaFacebookF>
+
+        </div>
+    </div>
+    
+    <aside >
     <p>Copyright © 2024 - All right reserved by EuroQuest</p>
   </aside></div>
 </footer>
