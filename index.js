@@ -39,6 +39,7 @@ async function run() {
             res.send(result)
 
         })
+
         //get the spot data 
 
         app.get('/addTourists', async (req, res) => {
@@ -50,7 +51,7 @@ async function run() {
 
         // Fetch and optionally sort tourist spots
         app.get('/touristSpots', async (req, res) => {
-            const sortParam = req.query.sort; // 'asc' or 'desc'
+            const sortParam = req.query.sort; // 'asc' or 'desc' - initiall it works from small to higher price
             let sortOrder = sortParam === 'desc' ? -1 : 1;
             try {
                 const cursor = spotDataCollection.find({});
