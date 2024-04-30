@@ -2,9 +2,11 @@
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../firebase.config";
+import { useNavigate } from "react-router-dom";
 //create contextAPI
 export const AuthContext = createContext(null)
 const AuthContextProvider = ({children}) => {
+    const navigate = useNavigate()
 
     const googleAuthProvider = new GoogleAuthProvider()
     const githubAuthProvider = new GithubAuthProvider()
@@ -58,6 +60,7 @@ const createUser = (email, password, name, photoUrl) => {
     // LogOut
     const logOut = () => {
         setLoading(true)
+        navigate('/')
         return signOut(auth)
     }
     // sign In with google
