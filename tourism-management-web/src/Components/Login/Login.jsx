@@ -30,7 +30,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
-                toast.success("Success! You will now be redirected")
+                toast.success("Successfully logged in")
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
