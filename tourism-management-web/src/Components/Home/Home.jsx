@@ -2,10 +2,39 @@ import { Helmet } from "react-helmet-async";
 import Slider from "../Slider/Slider";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { FaPeopleGroup } from "react-icons/fa6";
-import { useLoaderData } from "react-router-dom";
+
+import { FaSortAmountUp } from "react-icons/fa";
 import Spot from "../Spots/Spot";
+import { useEffect, useState } from "react";
 const Home = () => {
-    const touristSpots = useLoaderData()
+    const [touristSpots, setTouristSpots] = useState([]);
+
+    const fetchTouristSpots = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/touristSpots?sort=asc');
+            if (response.ok) {
+                const data = await response.json();
+                setTouristSpots(data);
+            } else {
+                console.error('Failed to fetch data:', response.statusText);
+                alert('Failed to fetch data. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            alert('Failed to fetch data. Please try again later.');
+        }
+    };
+
+    useEffect(() => {
+        fetchTouristSpots();
+    }, []);
+
+    const sortByAverageCost = () => {
+        const sortedSpots = [...touristSpots].sort((a, b) => a.averageCost - b.averageCost);
+        setTouristSpots(sortedSpots);
+    };
+
+   
 
     return (
         <div>
@@ -46,12 +75,14 @@ const Home = () => {
                     <div>
                         <h1 className="text-2xl lg:text-4xl font-bold  text-primaryNavy border-b-4 pb-5 border-primaryPink">Most Visited</h1>
                     </div>
-                    <div className="dropdown border-2 w-[120px] text-center p-3 border-primaryPurple rounded-full">
-                        <div tabIndex={0} role="button" >Sort By</div>
-                        <ul tabIndex={0} className="dropdown-content rounded-xl bg-primaryPurple text-white z-[1] mt-5 menu p-2 shadow w-52">
-                            <li><a>Price</a></li>
-                            <li><a>Country</a></li>
-                        </ul>
+                    <div className="dropdown border-2 w-[120px] shadow-xl text-center p-3 border-primaryPurple rounded-full">
+                        <div tabIndex={0} className="flex justify-center gap-2 items-center" role="button" >
+                            <FaSortAmountUp></FaSortAmountUp>
+                            <span>Sort By</span>
+                        </div>
+                        <ul tabIndex={0} className="dropdown-content border-2 border-primaryPurple rounded-xl text-white z-[1] mt-5 menu p-2 shadow w-52">
+                        <button className="btn rounded-full text-white bg-primaryNavy" onClick={sortByAverageCost}>Average Cost</button>
+                </ul>
                     </div>
 
 
@@ -59,7 +90,7 @@ const Home = () => {
                 </div>
                 <div data-aos="fade-up-right" className="grid grid-cols-1 mt-10 lg:grid-cols-3 md:grid-cols-2 gap-5 bg-primaryWhite p-2 rounded-xl">
                     {
-                        touristSpots.slice(0, 6).map(spotsData => <Spot key={spotsData._id} spotsData={spotsData}></Spot>)
+                        touristSpots.map(spotsData => <Spot key={spotsData._id} spotsData={spotsData}></Spot>)
                     }
                 </div>
             </div>

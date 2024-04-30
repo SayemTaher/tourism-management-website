@@ -17,6 +17,7 @@ import AllSpots from './Components/All Tourists/AllSpots';
 import AddTourists from './Components/Add Tourists Spot/AddTourists';
 import AuthContextProvider from './Utilities/AuthContextProvider';
 import PrivateRoute from './Components/Routes/PrivateRoute';
+import Details from './Components/Details/Details';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,7 +48,14 @@ const router = createBrowserRouter([
       {
         path:'/addTourists',
         element:<PrivateRoute><AddTourists></AddTourists></PrivateRoute>
+      },
+      {
+        path:'/details/:id',
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/addTourists/${params.id}`)
+
       }
+
 
 
 
