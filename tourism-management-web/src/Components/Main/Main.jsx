@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-
+import { Fade } from "react-awesome-reveal";
+import { Typewriter } from 'react-simple-typewriter'
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';

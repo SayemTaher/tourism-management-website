@@ -7,6 +7,7 @@ import { FaSortAmountUp } from "react-icons/fa";
 import Spot from "../Spots/Spot";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Utilities/AuthContextProvider";
+import { Fade } from "react-awesome-reveal";
 const Home = () => {
     const [touristSpots, setTouristSpots] = useState([]);
     const { theme} = useContext(AuthContext)
@@ -52,6 +53,7 @@ const Home = () => {
                     <img className="backdrop-blur-md p-2 rounded-xl w-[400px] h-[500px] object-cover" src="https://i.ibb.co/fDdL6Rs/daniel-bounliane-ove-Yd-Yj-ZQw-unsplash.jpg" alt="eiffel" />
                 </div>
                 <div className="flex flex-col gap-2" data-aos="fade-up">
+                    <Fade cascade damping={0.3}>
                     <div className="flex justify-between items-center">
                         <span>Paris, FRANCE</span>
                         <div className="flex items-center gap-2 p-2 border-2 border-primaryBlue rounded-full">
@@ -60,6 +62,7 @@ const Home = () => {
 
                         </div>
                     </div>
+                    </Fade>
                     <div className="mt-5">
                         <h1 className="text-4xl font-bold text-primaryNavy ">Eiffel Tower: A Soaring Emblem of French Ingenuity</h1>
                         <p className="text-sm mt-5 text-gray-500 max-w-[700px]">Step into the heart of Paris with a visit to the Eiffel Tower, an awe-inspiring symbol of French artistry and engineering. This iconic structure, originally constructed for the 1889 Worlds Fair, stands majestically over the city, offering breathtaking views that stretch across the sprawling urban landscape. Join one of the many guided tours available and ascend its levels to learn about the towers storied history, architectural marvels, and the visionary mind of Gustave Eiffel. </p>
