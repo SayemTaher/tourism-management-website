@@ -30,7 +30,7 @@ const Update = () => {
         const upDateCoffee = {
             name,email,totalVisitors, population,photUrl,spotName, countryName,location,description,averageCost,seasonality,travelTime
         }
-        fetch(`http://localhost:5000/addTourists/${_id}`,{
+        fetch(`https://b9a10-server-side-sayem-taher.vercel.app/addTourists/${_id}`,{
             method:'PUT',
             headers: {
                 'content-type':'application/json'

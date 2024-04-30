@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 const Spot = ({ spotsData }) => {
     const { _id, totalVisitors, photUrl, spotName, countryName, location, description, averageCost, seasonality, travelTime } = spotsData
     return (
-        <div data-aos="fade-up-left" className="flex h-[600px] flex-col gap-2 justify-between border-2 border-secondaryWhite bg-secondaryBlue p-3 rounded-xl">
-            <div>
-                <img className="w-[400px] h-[200px] object-cover rounded-2xl shadow-lg" src={photUrl} alt="img" />
+        <div data-aos="fade-up-left" className="flex h-[600px] flex-col gap-2  justify-between border-2 border-secondaryWhite bg-secondaryBlue p-3 rounded-xl">
+            <div className="flex justify-center ">
+                <img className="w-[400px] lg:w-[400px] h-[200px] object-cover rounded-2xl shadow-lg" src={photUrl} alt="img" />
             </div>
             <div className="flex justify-between items-center">
                 <div>

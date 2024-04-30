@@ -14,7 +14,7 @@ const Home = () => {
 
     const fetchTouristSpots = async () => {
         try {
-            const response = await fetch('http://localhost:5000/touristSpots?sort=asc');
+            const response = await fetch('https://b9a10-server-side-sayem-taher.vercel.app/touristSpots?sort=asc');
             if (response.ok) {
                 const data = await response.json();
                 setTouristSpots(data);
@@ -55,7 +55,7 @@ const Home = () => {
                 <div className="flex flex-col gap-2" data-aos="fade-up">
                     <Fade cascade damping={0.3}>
                     <div className="flex justify-between items-center">
-                        <span>Paris, FRANCE</span>
+                        <span className="font-medium">Paris, FRANCE</span>
                         <div className="flex items-center gap-2 p-2 border-2 border-primaryBlue rounded-full">
                             <FaPeopleGroup></FaPeopleGroup>
                             <span>Yearly Tourists - 38 Million</span>
@@ -76,7 +76,7 @@ const Home = () => {
 
             </div>
             <div className="flex flex-col gap-5 mt-10">
-                <div className="flex z-20 items-center justify-between" data-aos="fade-in">
+                <div className="ml-5 mr-5 lg:ml-0 lg:mr-0 flex z-20 items-center justify-between" data-aos="fade-in">
                     <div>
                         <h1 className="text-2xl lg:text-4xl font-bold  text-primaryNavy border-b-4 pb-5 border-primaryPink">Most Visited</h1>
                     </div>

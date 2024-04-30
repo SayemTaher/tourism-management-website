@@ -11,7 +11,7 @@ const MyList = () => {
     const [mySpot, setMySpot] = useState([])
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://b9a10-server-side-sayem-taher.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -35,7 +35,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addTourists/${_id}`, {
+                fetch(`https://b9a10-server-side-sayem-taher.vercel.app/addTourists/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -62,14 +62,14 @@ const MyList = () => {
                 <title>EuroQuest | My List</title>
             </Helmet>
             <div className="mb-5">
-                <h1 className="text-3xl font-bold text-primaryNavy">Available Spot Data - {mySpot.length}</h1>
+                <h1 className="text-3xl ml-5 lg:ml-0 font-bold text-primaryNavy">Available Spot Data - {mySpot.length}</h1>
             </div>
             <div>
                 <div className="overflow-x-auto">
                     <table className="table ">
                         {/* head */}
                         <thead>
-                            <tr className="font-bold text-lg">
+                            <tr className="lg:font-bold lg:text-lg">
                                 <th>Country</th>
                                 <th>Location</th>
                                 <th>Price</th>
@@ -89,8 +89,8 @@ const MyList = () => {
                                         <td> €{spot.averageCost}</td>
                                         <td>{spot.totalVisitors}</td>
 
-                                        <Link to={`/update/${spot._id}`}><td><button className="btn bg-primaryNavy hover:bg-primaryPurple text-xl flex items-center justify-center text-center w-[80px] text-white font-medium rounded-xl p-2 "><FaRegPenToSquare></FaRegPenToSquare> </button></td></Link>
-                                        <td><button onClick={() => handleDelete(spot._id)} className="btn hover:bg-primaryBlue bg-primaryPink text-xl flex items-center justify-center text-center w-[80px]  text-white font-medium rounded-xl p-2"><MdDelete></MdDelete></button></td>
+                                        <Link to={`/update/${spot._id}`}><td><button className="btn bg-primaryNavy hover:bg-primaryPurple text-xl flex items-center justify-center text-center lg:w-[80px] w-[50px] text-white font-medium rounded-xl p-2 "><FaRegPenToSquare></FaRegPenToSquare> </button></td></Link>
+                                        <td><button onClick={() => handleDelete(spot._id)} className="btn hover:bg-primaryBlue bg-primaryPink text-xl flex items-center justify-center text-center lg:w-[80px] w-[50px]  text-white font-medium rounded-xl p-2"><MdDelete></MdDelete></button></td>
 
 
 

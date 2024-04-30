@@ -5,7 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer data-aos="fade-up" className="footer flex  flex-col justify-center items-center  p-10 bg-primaryWhite text-base-content">
-  <div className="footer border-b-2 pb-10 border-dashed border-gray-300 flex justify-center gap-40 p-10  text-base-content">
+  <div className="footer border-b-2 pb-10 border-dashed border-gray-300 flex lg:flex-row flex-col justify-center gap-40 p-10  text-base-content">
   <nav>
     <h6 className="footer-title">Services</h6> 
     <a className="link link-hover">Branding</a>

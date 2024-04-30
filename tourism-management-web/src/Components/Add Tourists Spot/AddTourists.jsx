@@ -27,7 +27,7 @@ const AddTourists = () => {
         const newSpot = {
             name,email,totalVisitors, population,photUrl,spotName, countryName,location,description,averageCost,seasonality,travelTime
         }
-        fetch('http://localhost:5000/addTourists',{
+        fetch('https://b9a10-server-side-sayem-taher.vercel.app/addTourists',{
             method:'POST',
             headers: {
                 'content-type':'application/json'

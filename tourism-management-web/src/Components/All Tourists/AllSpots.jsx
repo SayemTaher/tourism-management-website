@@ -7,7 +7,7 @@ const AllSpots = () => {
     return (
         <div>
             <div>
-                <h1 className="mt-10 font-bold mb-5 text-2xl lg:text-4xl text-primaryNavy">All Tourists Spot...</h1>
+                <h1 data-aos="fade-up" className="mt-10 ml-5 lg:ml-0 font-bold mb-5 text-3xl lg:text-4xl text-primaryNavy">All Tourists Spot...</h1>
             </div>
             <div data-aos="fade-up-right" className="grid grid-cols-1 mt-10 mb-5 lg:grid-cols-3 md:grid-cols-2 gap-5 bg-primaryWhite p-2 rounded-xl">
                     {

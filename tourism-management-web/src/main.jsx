@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/addTourists')
+        loader:()=>fetch('https://b9a10-server-side-sayem-taher.vercel.app/addTourists')
       },
       {
         path:'/login',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path:'/allSpot',
         element:<AllSpots></AllSpots>,
-        loader:()=>fetch('http://localhost:5000/addTourists')
+        loader:()=>fetch('https://b9a10-server-side-sayem-taher.vercel.app/addTourists')
       },
       {
         path:'/addTourists',
@@ -54,13 +54,13 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         element:<PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/addTourists/${params.id}`)
+        loader: ({params}) => fetch(`https://b9a10-server-side-sayem-taher.vercel.app/addTourists/${params.id}`)
 
       },
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:5000/addTourists/${params.id}`)
+        loader:({params}) => fetch(`https://b9a10-server-side-sayem-taher.vercel.app/addTourists/${params.id}`)
       }
 
 
