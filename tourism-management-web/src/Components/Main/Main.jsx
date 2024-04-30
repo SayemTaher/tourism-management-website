@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-
+import Swal from 'sweetalert2'
 
 // ..
 AOS.init({
@@ -22,7 +23,7 @@ AOS.init({
 
 const Main = () => {
     return (
-        <div>
+        <div className='bg-secondaryBlue'>
             <div className='mx-auto  container'>
                 <Header></Header>
                 <Outlet></Outlet>  

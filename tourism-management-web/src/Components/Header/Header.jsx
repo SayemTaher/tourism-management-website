@@ -110,7 +110,7 @@ const Header = () => {
     );
 
     return (
-        <div className="navbar bg-primaryWhite  container flex justify-center items-center mx-auto p-3 z-20   ">
+        <div className="navbar bg-primaryWhite    relative mx-auto p-3 z-20   ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

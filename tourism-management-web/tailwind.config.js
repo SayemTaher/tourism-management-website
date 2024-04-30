@@ -16,6 +16,9 @@ export default {
         primaryNavy: "#000522",
         
       },
+      fontFamily: {
+        'mulish': ['Mulish', 'sans-serif'],
+      },
     },
   },
   plugins: [

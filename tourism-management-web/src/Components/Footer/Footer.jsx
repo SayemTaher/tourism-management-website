@@ -2,8 +2,8 @@
 
 const Footer = () => {
     return (
-        <footer className="footer flex  flex-col justify-center items-center  p-10 bg-base-200 text-base-content">
-  <div className="footer border-b-2 pb-10 border-dashed border-gray-300 flex justify-center gap-40 p-10 bg-base-200 text-base-content">
+        <footer data-aos="fade-up" className="footer flex  flex-col justify-center items-center  p-10 bg-primaryWhite text-base-content">
+  <div className="footer border-b-2 pb-10 border-dashed border-gray-300 flex justify-center gap-40 p-10  text-base-content">
   <nav>
     <h6 className="footer-title">Services</h6> 
     <a className="link link-hover">Branding</a>
@@ -38,7 +38,7 @@ const Footer = () => {
   </form>
   </div>
   <div ><aside >
-    <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © 2024 - All right reserved by EuroQuest</p>
   </aside></div>
 </footer>
     );
