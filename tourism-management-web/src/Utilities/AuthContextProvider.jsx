@@ -8,6 +8,11 @@ const AuthContextProvider = ({children}) => {
 
     const googleAuthProvider = new GoogleAuthProvider()
     const githubAuthProvider = new GithubAuthProvider()
+    const [theme, setTheme] = useState('light'); // Default theme
+
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    };
 
     const [user,setUser] = useState(null)
     const [loading,setLoading] = useState(true)
@@ -70,7 +75,7 @@ const createUser = (email, password, name, photoUrl) => {
 
 
     const AuthInfo = {
-        user,createUser,loading,signIn,logOut,signInWithGoogle,signInWithGithub
+        user,createUser,loading,signIn,logOut,signInWithGoogle,signInWithGithub, theme, toggleTheme
 
     }
     return (

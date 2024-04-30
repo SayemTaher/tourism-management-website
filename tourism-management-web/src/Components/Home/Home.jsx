@@ -5,9 +5,11 @@ import { FaPeopleGroup } from "react-icons/fa6";
 
 import { FaSortAmountUp } from "react-icons/fa";
 import Spot from "../Spots/Spot";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Utilities/AuthContextProvider";
 const Home = () => {
     const [touristSpots, setTouristSpots] = useState([]);
+    const { theme} = useContext(AuthContext)
 
     const fetchTouristSpots = async () => {
         try {
@@ -37,7 +39,7 @@ const Home = () => {
    
 
     return (
-        <div>
+        <div className={`h-full ${theme === 'dark' ? 'bg-primaryWhite text-gray-500' : 'bg-secondaryBlue gray-600'}`}>
             <Helmet>
                 <title>EuroQuest | Home</title>
 

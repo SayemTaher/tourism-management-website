@@ -40,10 +40,10 @@ const Footer = () => {
   </form>
   </div>
   <div >
-    <div className="flex  justify-between">
+    <div className="flex flex-col container gap-5 justify-center items-center mb-5">
         <div><img src="https://i.ibb.co/fSzys6C/logo2.png" alt="" /></div>
-        <div>euroQuest23@gmail.com</div>
-        <div className="flex items-center gap-2 text-2xl">
+        <div className="font-bold">Email - euroQuest23@gmail.com</div>
+        <div className="flex items-center justify-center gap-2 text-2xl">
 <FaLinkedin></FaLinkedin>
 <FaInstagram></FaInstagram>
 <FaFacebookF></FaFacebookF>
