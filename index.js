@@ -23,10 +23,10 @@ const client = new MongoClient(uri, {
         deprecationErrors: true,
     }
 });
-
+// function to run mongoDB
 async function run() {
     try {
-        // Connect the client to the server	(optional starting in v4.7)
+        
         // await client.connect();
         const spotDataCollection = client.db('spotsDB').collection('spots')
         // get the data posted from the client 
