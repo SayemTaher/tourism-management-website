@@ -2,10 +2,12 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+//always keep the dotenv here
 require('dotenv').config()
 const port = process.env.PORT || 5000
 
 // Middleware setup
+
 app.use(cors())
 app.use(express.json())
 
